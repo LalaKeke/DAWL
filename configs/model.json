@@ -1,0 +1,40 @@
+{
+  "model": {
+    "embed_dim": 128,
+    "num_heads": 4,
+    "transformer_layers": 2,
+    "transformer_ffn_dim": 2048,
+    "dropout": 0.1,
+    "layer_norm_eps": 0.00001,
+    "future_steps": 30
+  },
+  "input": {
+    "ego_dim": 10,
+    "agent_dim": 6,
+    "static_dim": 12,
+    "lane_sides": 2
+  },
+  "physics": {
+    "wheelbase": 2.588,
+    "dt": 0.1,
+    "horizon": 30,
+    "ego_acceleration_limit": 10,
+    "ego_steering_limit": 1.066,
+    "lateral_acceleration_limit": 3,
+    "steering_rate_limit": 0.4
+  },
+  "weights": {
+    "groups": 8,
+    "lower": 0.00625,
+    "upper": 0.25,
+    "ratio_scale": 8,
+    "temperature": 0.9740386195995809
+  },
+  "encoder_ema": {
+    "beta": 0.995,
+    "interval_successful_steps": 100,
+    "direction": "Control_to_Weight",
+    "initialize_by_hard_copy": false
+  },
+  "scope": "architecture_reference_not_a_formal_training_recipe"
+}
